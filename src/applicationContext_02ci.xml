@@ -7,6 +7,15 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean id="theCoach" class="io.spring._01ioc.idealsolution.StrengthCoach" />
+	<!-- Define the dependency -->
+	<bean id="myFortune"
+		class="io.spring._02di.constructorinjection.HappyFortuneService"></bean>
+
+
+	<bean id="theCoach"
+		class="io.spring._02di.constructorinjection.BaseballCoach">
+		<!-- set up the constructor injection -->
+		<constructor-arg ref="myFortune" />
+	</bean>
 
 </beans>

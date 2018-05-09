@@ -7,5 +7,6 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<bean id="theCoach" class="io.spring._01ioc.idealsolution.GymnasticCoach"/>
 
 </beans>
